@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 database/transactions/neo4j/neostore.transaction.db.0
 database/transactions/system/neostore.transaction.db.0
+=======
+database\transactions\neo4j\neostore.transaction.db.0
+database\transactions\system\neostore.transaction.db.0
+>>>>>>> 1a6725491ae32bd6d94f2aec0a27dd58dfbb995d
