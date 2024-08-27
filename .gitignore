@@ -1,2 +1,3 @@
 database\transactions\neo4j\neostore.transaction.db.0
 database\transactions\system\neostore.transaction.db.0
+credentials.txt
