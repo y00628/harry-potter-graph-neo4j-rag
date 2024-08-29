@@ -1,0 +1,33 @@
+name,friend,classmate,teacher,family,immediate family,lover,opponent,colleague,teammate,enemy
+  Flitwick ,0,0,1,0,0,0,0,0,0,0
+  Sprout ,0,0,1,0,0,0,0,0,0,0
+ Dean,1,1,0,0,0,0,0,0,0,0
+ Filch ,0,0,1,1,0,0,0,0,0,0
+ Madam Pomfrey ,0,0,1,0,0,0,0,0,0,0
+Angelina Johnson,1,1,0,0,0,0,0,0,1,0
+Charlie,0,0,0,0,0,0,0,0,0,0
+Crabbe,0,1,0,0,0,0,0,0,0,0
+Dudley,0,0,0,1,0,0,0,0,0,0
+Dumbledore,0,0,1,1,0,0,0,0,0,0
+Flint,0,1,0,0,0,0,1,0,0,0
+Fred,1,1,0,0,0,0,0,0,1,0
+George,1,1,0,0,0,0,0,0,1,0
+Goyle,0,1,0,0,0,0,0,0,0,0
+Hagrid,1,0,0,0,0,0,0,0,0,0
+Hermione,1,1,0,0,0,0,0,0,0,0
+James,0,0,0,1,1,0,0,0,0,0
+Jordan,1,1,0,0,0,0,0,0,1,0
+Lily,0,0,0,1,1,0,0,0,0,0
+Madam Pince,0,0,1,0,0,0,0,0,0,0
+Malfoy,0,1,0,0,0,1,1,0,0,0
+McGonagall,0,0,1,0,0,0,0,0,0,0
+Neville,1,1,0,0,0,0,0,0,0,0
+Petunia,0,0,0,1,0,0,0,0,0,0
+Piers,0,0,0,1,0,0,0,0,0,0
+Professor Huo Qi,0,0,1,0,0,0,0,0,0,0
+Quirrel,0,0,1,0,0,0,0,0,0,1
+Ron,1,1,0,0,0,0,0,0,0,0
+Snape,0,0,1,0,0,0,0,0,0,0
+Vernon Dursley,0,0,0,1,0,0,0,0,0,0
+Voldemort,0,0,0,0,0,0,0,0,0,1
+Wood,1,1,0,0,0,0,0,0,1,0
