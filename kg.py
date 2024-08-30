@@ -59,8 +59,10 @@ def create_kg():
                 existing_relations = [key for key, value in relations.items() if int(value) == 1]
                 
                 for existing_relation in existing_relations:
-                    session.write_transaction(create_relationship, 'Harry', existing_relation, name, {})
                     session.write_transaction(create_relationship, name, existing_relation, 'Harry', {})
+                    
+                    if existing_relation != 'TEACHER':
+                        session.write_transaction(create_relationship, name, existing_relation, 'Harry', {})
                     
             node_count = session.write_transaction(count_nodes)
             relationship_count = session.write_transaction(count_relationships)
