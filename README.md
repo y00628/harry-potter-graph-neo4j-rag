@@ -25,6 +25,37 @@ You will need to manually download the necessary data from the provided SharePoi
 - Click on `EN-Relations`
 - Click on a chapter of your choice and save it in the data folder (Chapter 1 already in there)
 
+### 3. Installing Neo4j Desktop Version
+
+#### 1. Download Neo4j Desktop
+
+- Go to the official Neo4j website: [https://neo4j.com/download/](https://neo4j.com/download/)
+- Choose **Neo4j Desktop** and click **Download**.
+
+#### 2. Install Neo4j Desktop
+
+#### **For Windows**
+
+- Open the `.exe` file you downloaded.
+- Follow the installation prompts.
+- Once installed, launch **Neo4j Desktop**.
+
+#### **For macOS**
+
+- Open the `.dmg` file you downloaded.
+- Drag and drop the **Neo4j Desktop** icon to your Applications folder.
+- Launch **Neo4j Desktop** from your Applications folder.
+
+#### **For Linux**
+
+- Open a terminal and run the following commands:
+
+  ```bash
+  wget https://dist.neo4j.com/neo4j-desktop-5.23.0-x86_64.AppImage
+  chmod a+x neo4j-desktop-5.23.0-x86_64.AppImage
+  ./neo4j-desktop-5.23.0-x86_64.AppImage
+  ```
+
 ### 4. Create and Activate Virtual Environment
 
 After cloning the repository, create a virtual environment to isolate project dependencies. This step ensures that the dependencies for this project don't interfere with others.
