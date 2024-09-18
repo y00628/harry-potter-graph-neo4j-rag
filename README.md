@@ -14,8 +14,7 @@ cd harry-potter-graph-neo4j-rag
 You will need to manually download the necessary data from the provided SharePoint link. Follow the steps below:
 - Go to the following link: https://nuochenpku.github.io/HPD.github.io/download
 - Click on `EN-Relations`
-2. Download the relevant files.
-3. Save them to the appropriate directory in your project.
+
 
 ### 4. Create and Activate Virtual Environment
 After cloning the repository, create a virtual environment to isolate project dependencies. This step ensures that the dependencies for this project don't interfere with others.
