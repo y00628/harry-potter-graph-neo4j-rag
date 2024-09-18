@@ -81,3 +81,32 @@ With the virtual environment activated, install the necessary dependencies using
 ```bash
 pip install -r requirements.txt
 ```
+
+## Instructions
+
+### 1. Run `kg.py` Script to Create a Knowledge Graph
+
+- Open your terminal (or command prompt) and navigate to the directory containing the script using the `cd` command.
+
+  For example:
+
+  ```bash
+  cd /path/to/your/kg.py
+  ```
+
+- Ensure that Neo4j Desktop is running and the database is started.
+- Run the script using Python by executing the following command:
+
+  ```bash
+  py kg.py
+  ```
+
+  The `kg.py` script will preprocess the data and create a knowledge graph in your Neo4j database. All data preprocessing is handled within the script, so no additional steps are required.
+
+- After running the script, you should see a confirmation sentence indicating that the knowledge graph has been successfully created.
+
+  Example output:
+
+  ```bash
+  Knowledge Graph created with 33 nodes and 96 relationships.
+  ```
