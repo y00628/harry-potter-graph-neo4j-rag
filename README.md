@@ -209,3 +209,10 @@ Ensure that your `.env` file contains the correct configuration for Neo4j and Op
 
 - The `vector_search` function uses OpenAI's embedding model to find similarities within the graph. Make sure Neo4j is set up with GDS (Graph Data Science) and the nodes are embedded.
 - You can adjust the `top_k` parameter to return more or fewer similar nodes based on your needs. The default is 3.
+
+### Troubleshooting
+
+If you encounter any issues:
+
+- Verify that Neo4j is running and the credentials are correct in the `.env` file.
+- Ensure OpenAI API key is correctly set and accessible.
