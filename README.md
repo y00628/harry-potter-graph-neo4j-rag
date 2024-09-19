@@ -111,28 +111,28 @@ pip install -r requirements.txt
   Knowledge Graph created with 33 nodes and 96 relationships.
   ```
 
-### 2. Explicit Retrieval
+### 2. Query Retrieval
 
-After setting up the knowledge graph using `kg.py`, you can run the `explicit_retrieval.py` script to explicit retrieve relevant information from the knowledge graph.
+After setting up the knowledge graph using `kg.py`, you can run the `harry_potter_rag.py` script to explicit retrieve relevant information from the knowledge graph.
 
 #### Retrieve Schema
 
 You can refresh and print the graph schema by running:
 
 ```bash
-py explicit_retrieval.py get_schema
+py harry_potter_rag.py get_schema
 ```
 
 This will refresh and display the schema of the graph in the console.
 
-#### Retrieve Query
+#### Explicit Retrieval
 
-You can query the graph by providing a question:
+To retrieve a response based on a specific question using the knowledge graph:
 
 Example:
 
 ```bash
-python explicit_retrieval.py retrieve "List all the people who are not enemies with Harry"
+python harry_potter_rag.py explicit_retrieve "List all the people who are not enemies with Harry"
 ```
 
 This will invoke a Cypher query on the graph and return a natural response based on the provided question.
@@ -145,7 +145,43 @@ Here are a few example queries you can try:
 
 These queries will retrieve information based on the graph structure created by `kg.py`.
 
-### Notes
+#### Implicit Retrieval
+
+To retrieve a response using a language model without directly querying the graph:
+
+```bash
+py script.py implicit_retrieve "Your question here"
+```
+
+For example:
+
+```bash
+py script.py implicit_retrieve "Who are Harry's allies?"
+```
+
+#### Vector Search
+
+To perform a vector search for similar nodes based on a query, and return the top K most similar results:
+
+```bash
+py script.py vector_search "Your question here" <top_k>
+```
+
+If you do not specify the second parameter (`<top_k>`), the default value will be `3`.
+
+For example, to get the top 5 similar nodes based on a question:
+
+```bash
+py script.py vector_search "Who are similar to Harry?" 5
+```
+
+To get the top 3:
+
+```bash
+py script.py vector_search "Who are similar to Harry?"
+```
+
+## Notes
 
 #### Neo4j and OpenAI Configuration
 
@@ -155,3 +191,8 @@ Ensure that your `.env` file contains the correct configuration for Neo4j and Op
 - **NEO4J_USERNAME**: Your Neo4j username
 - **NEO4J_PASSWORD**: Your Neo4j password
 - **OPENAI_API_KEY**: Your OpenAI API key
+
+#### Vector Search Method
+
+- The `vector_search` function uses OpenAI's embedding model to find similarities within the graph. Make sure Neo4j is set up with GDS (Graph Data Science) and the nodes are embedded.
+- You can adjust the `top_k` parameter to return more or fewer similar nodes based on your needs. The default is 3.
