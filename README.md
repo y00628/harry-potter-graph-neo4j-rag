@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ## Instructions
 
-### 1. Run `kg.py` Script to Create a Knowledge Graph
+### 1. Creating Knowledge Graph
 
 - Open your terminal (or command prompt) and navigate to the directory containing the script using the `cd` command.
 
@@ -110,3 +110,47 @@ pip install -r requirements.txt
   ```bash
   Knowledge Graph created with 33 nodes and 96 relationships.
   ```
+
+### 2. Explicit Retrieval
+
+After setting up the knowledge graph using `kg.py`, you can run the `explicit_retrieval.py` script to explicit retrieve relevant information from the knowledge graph.
+
+- Retrieve Schema
+
+You can refresh and print the graph schema by running:
+
+```bash
+py explicit_retrieval.py get_schema
+```
+
+This will refresh and display the schema of the graph in the console.
+
+- Retrieve Query
+  You can query the graph by providing a question:
+
+Example:
+
+```bash
+python explicit_retrieval.py retrieve "List all the people who are not enemies with Harry"
+```
+
+This will invoke a Cypher query on the graph and return a natural response based on the provided question.
+
+Here are a few example queries you can try:
+
+- "List all the people who are not enemies with Harry"
+- "Show all the relationships in the graph"
+- "Who are the allies of Harry?"
+
+These queries will retrieve information based on the graph structure created by `kg.py`.
+
+### Notes
+
+#### Neo4j and OpenAI Configuration
+
+Ensure that your `.env` file contains the correct configuration for Neo4j and OpenAI:
+
+- **NEO4J_URI**: The URI of your Neo4j database (e.g., `bolt://localhost:7687`)
+- **NEO4J_USERNAME**: Your Neo4j username
+- **NEO4J_PASSWORD**: Your Neo4j password
+- **OPENAI_API_KEY**: Your OpenAI API key
