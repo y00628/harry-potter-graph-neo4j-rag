@@ -115,7 +115,7 @@ pip install -r requirements.txt
 
 After setting up the knowledge graph using `kg.py`, you can run the `explicit_retrieval.py` script to explicit retrieve relevant information from the knowledge graph.
 
-- Retrieve Schema
+#### Retrieve Schema
 
 You can refresh and print the graph schema by running:
 
@@ -125,8 +125,9 @@ py explicit_retrieval.py get_schema
 
 This will refresh and display the schema of the graph in the console.
 
-- Retrieve Query
-  You can query the graph by providing a question:
+#### Retrieve Query
+
+You can query the graph by providing a question:
 
 Example:
 
