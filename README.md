@@ -150,13 +150,13 @@ These queries will retrieve information based on the graph structure created by 
 To retrieve a response using a language model without directly querying the graph:
 
 ```bash
-py script.py implicit_retrieve "Your question here"
+py harry_potter_rag.py implicit_retrieve "Your question here"
 ```
 
 For example:
 
 ```bash
-py script.py implicit_retrieve "Who are Harry's allies?"
+py harry_potter_rag.py implicit_retrieve "Who are Harry's allies?"
 ```
 
 #### Vector Search
@@ -164,7 +164,7 @@ py script.py implicit_retrieve "Who are Harry's allies?"
 To perform a vector search for similar nodes based on a query, and return the top K most similar results:
 
 ```bash
-py script.py vector_search "Your question here" <top_k>
+py harry_potter_rag.py vector_search "Your question here" <top_k>
 ```
 
 If you do not specify the second parameter (`<top_k>`), the default value will be `3`.
@@ -172,13 +172,13 @@ If you do not specify the second parameter (`<top_k>`), the default value will b
 For example, to get the top 5 similar nodes based on a question:
 
 ```bash
-py script.py vector_search "Who are similar to Harry?" 5
+py harry_potter_rag.py vector_search "Who are similar to Harry?" 5
 ```
 
 To get the top 3:
 
 ```bash
-py script.py vector_search "Who are similar to Harry?"
+py harry_potter_rag.py vector_search "Who are similar to Harry?"
 ```
 
 ## Notes
