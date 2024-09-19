@@ -34,20 +34,26 @@ def get_schema():
     """Refresh and return the graph schema."""
     graph.refresh_schema()
     schema = graph.schema
-    # print(schema)
+    print(schema)
     return schema
 
-def retrieve(model_name, question):
+def retrieve(question):
     """Retrieve a response from the graph based on the provided question using a specific model."""
     llm = ChatOpenAI(
-        model=model_name,
+        model='gpt-4',
         temperature=0,
         max_tokens=None,
         timeout=None,
         max_retries=2
     )
 
-    chain = GraphCypherQAChain.from_llm(graph=graph, llm=llm, verbose=True)
+    chain = GraphCypherQAChain.from_llm(
+        graph=graph,
+        llm=llm,
+        verbose=True,
+        allow_dangerous_requests=True
+    )
+    
     response = chain.invoke({'query': question})
     
     print(response)
@@ -64,12 +70,11 @@ if __name__ == "__main__":
         if function_name == "get_schema":
             get_schema()
         elif function_name == "retrieve":
-            if len(sys.argv) == 4:  # Expecting model name and question as arguments
-                model_name = sys.argv[2]
-                question = sys.argv[3]
-                retrieve(model_name, question)
+            if len(sys.argv) == 3:  # Expecting model name and question as arguments
+                question = sys.argv[2]
+                retrieve(question)
             else:
-                print("Function 'retrieve' requires two arguments: model_name and question.")
+                print("Function 'retrieve' requires one argument: question.")
         else:
             print(f"Function '{function_name}' not recognized.")
     else:
