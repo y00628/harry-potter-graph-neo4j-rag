@@ -113,7 +113,7 @@ pip install -r requirements.txt
 
 ### 2. Query Retrieval
 
-After setting up the knowledge graph using `kg.py`, you can run the `harry_potter_rag.py` script to explicit retrieve relevant information from the knowledge graph.
+After setting up the knowledge graph using `kg.py`, you can run the `harry_potter_rag.py` script to retrieve relevant information.
 
 #### Retrieve Schema
 
